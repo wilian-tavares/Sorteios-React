@@ -1,0 +1,44 @@
+.header {
+    position: sticky;
+    top: 0;
+    background-color: rgb(81, 83, 83);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 150px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo h1 {
+    color: green;
+}
+.logo span {
+    color: yellow;
+}
+
+.header .navegacao ul{
+    display: flex;
+    list-style: none;
+}
+
+.header .navegacao ul li {
+    margin-left: 10px;
+}
+
+.header .navegacao ul li a{
+    color: white;
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+.header .navegacao ul li a:hover{
+    color: rgb(52, 117, 63);
+    background-color: #CCC;
+    padding: 6px 0;
+    scale: (1.1);
+}
