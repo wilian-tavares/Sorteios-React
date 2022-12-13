@@ -1,28 +1,9 @@
 import './sorteio.css';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 
-function Sorteio({ placeholder , qtd}){
-
-
-    let [dezenas, setDezenas] = useState([])
-    let [dezena, setDezena] = useState();
-
+function Sorteio({ placeholder, funcao, valor }){
  
-
-
-    function Sortear(qtd){  
-        const a = 6;
-        while(dezenas.length < a){
-            dezena = Math.round(Math.random(0,60)*100)
-            
-            dezenas.push(dezena)
-            console.log(dezena)
-            
-            
-        }
-        console.log(dezenas)
-    }
 
 
     return(
@@ -30,9 +11,8 @@ function Sorteio({ placeholder , qtd}){
             <div className="container-sorteio">
               
                 <span className='campo-sorteio'>{placeholder}</span>
-                <button onClick={Sortear} className='botao-sorteio'>SORTEAR</button>
+                <button onClick={funcao} className='botao-sorteio'>SORTEAR</button>
                
-
             </div>
         </div>
         
