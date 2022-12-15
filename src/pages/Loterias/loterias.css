@@ -5,3 +5,13 @@
   align-items: center;
   flex-direction: column;
 }
+
+#lotomania {
+  height: 200px;
+  padding: 10px;
+}
+
+/* .footer {
+  position: fixed;
+  bottom: 0;
+} */

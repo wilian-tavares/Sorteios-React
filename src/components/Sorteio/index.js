@@ -2,7 +2,7 @@ import './sorteio.css';
 // import { useState } from 'react';
 
 
-function Sorteio({ placeholder, funcao, valor }){
+function Sorteio({ placeholder, funcao, id }){
  
 
 
@@ -10,7 +10,7 @@ function Sorteio({ placeholder, funcao, valor }){
         <div>        
             <div className="container-sorteio">
               
-                <span className='campo-sorteio'>{placeholder}</span>
+                <span id={id} className='campo-sorteio'>{placeholder}</span>
                 <button onClick={funcao} className='botao-sorteio'>SORTEAR</button>
                
             </div>

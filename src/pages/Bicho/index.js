@@ -4,21 +4,34 @@ import './bicho.css';
 function Bicho(){
 
     function Grupo(){
+        let grupo = document.querySelector('#grupo');
         let dezena = Math.round(Math.random()*25 + 1)
-        console.log(dezena)
+
+        return (
+            grupo.innerHTML = dezena
+        )
     }
 
     function Centena(){
+        let centena = document.querySelector('#centena')
         let dezena = Math.round(Math.random()*1000)
-        console.log(dezena)
+
+        return(
+            centena.innerHTML = dezena
+        )
     }
 
     function Milhar(){
-        let dezena = Math.round(Math.random()*10000)
-        console.log(dezena)
+        let milhar = document.querySelector('#milhar');
+        let dezena = Math.round(Math.random()*10000);
+        
+        return(
+            milhar.innerHTML = dezena
+        )
     }
 
     function Duque(){
+        let duque = document.querySelector('#duque');
         let dezena;
         let dezenas = [];
 
@@ -31,10 +44,13 @@ function Bicho(){
                 dezenas.push(dezena)
             }
         }
-            console.log(dezenas)
+            return (
+                duque.innerHTML = dezenas
+            )
     }
 
     function Terno(){
+        let terno = document.querySelector('#terno');
         let dezena;
         let dezenas = [];
 
@@ -47,18 +63,20 @@ function Bicho(){
                 dezenas.push(dezena)
             }
         }
-            console.log(dezenas)
+            return(
+                terno.innerHTML = dezenas
+            )
     }
         
     return(
         <div className='container-bicho'>
             <h1>Bem Vindo ao Bicho</h1>
 
-            <Sorteio funcao={Grupo} placeholder='GRUPO'/>
-            <Sorteio funcao={Centena} placeholder='CENTENA'/>
-            <Sorteio funcao={Milhar} placeholder='MILHAR'/>
-            <Sorteio funcao={Duque} placeholder='DUQUE-DEZENA'/>
-            <Sorteio funcao={Terno} placeholder='TERNO-DEZENA'/>
+            <Sorteio id='grupo' funcao={Grupo} placeholder='GRUPO'/>
+            <Sorteio id='centena' funcao={Centena} placeholder='CENTENA'/>
+            <Sorteio id='milhar' funcao={Milhar} placeholder='MILHAR'/>
+            <Sorteio id='duque' funcao={Duque} placeholder='DUQUE-DEZENA'/>
+            <Sorteio id='terno' funcao={Terno} placeholder='TERNO-DEZENA'/>
             
         </div>
 

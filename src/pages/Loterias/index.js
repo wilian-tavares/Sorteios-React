@@ -25,13 +25,15 @@ function Loterias(){
             }            
         }
         dezenas.sort(Order);
-        console.log(dezenas);
 
-        return mega.append = 'teste';
+        return (
+            mega.innerHTML = dezenas
+        )
     }
 
 
     function Quina(){
+        let quina = document.querySelector('#quina');
         let dezena;
         let dezenas = [];
 
@@ -47,11 +49,15 @@ function Loterias(){
             }            
         }
         dezenas.sort(Order)
-        console.log(dezenas)
+        return (
+            quina.innerHTML = dezenas
+        )
     }
 
        
     function Lotofacil(){
+        let lotofacil = document.querySelector('#lotofacil');
+
         let dezena;
         let dezenas = [];
 
@@ -64,31 +70,40 @@ function Loterias(){
             }
             else {
                 dezenas.push(dezena)
-          
             }            
         }
         dezenas.sort(Order)
-        console.log(dezenas)
+
+        return(
+            lotofacil.innerHTML = dezenas
+        )
     }
 
     function Lotomania(){
+        let lotomania = document.querySelector('#lotomania');
+
         let dezena;
         let dezenas = [];
 
-        const qtd = 5;
+        const qtd = 50;
 
         while(dezenas.length < qtd){
-            dezena = Math.round(Math.random(0,6)*100)
+            dezena = Math.round(Math.random()*99)
 
             if(dezenas.includes(dezena)){
             }
             else {
                 dezenas.push(dezena)
-                console.log(dezena)
             }            
         }
         dezenas.sort(Order)
-        console.log(dezenas)
+        lotomania.innerHTML = ''
+
+        return(
+            dezenas.map((dezena) => {
+            lotomania.innerHTML += `${dezena} - `;
+            })
+        )
     }
     
    
@@ -102,8 +117,8 @@ function Loterias(){
 
             <Sorteio id='mega' funcao={Mega}  placeholder={'Mega'}/>
             <Sorteio id='quina' funcao={Quina} placeholder='QUINA'/>
-            <Sorteio funcao={Lotofacil} placeholder='LOTOFACIL'/>
-            <Sorteio funcao={Lotomania} placeholder='LOTOMANIA'/>
+            <Sorteio id='lotofacil' funcao={Lotofacil} placeholder='LOTOFACIL'/>
+            <Sorteio id='lotomania' funcao={Lotomania} placeholder='LOTOMANIA'/>
             
             
         </div>
