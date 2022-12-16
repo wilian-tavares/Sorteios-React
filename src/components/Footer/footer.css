@@ -1,7 +1,4 @@
 .footer {
-    /* position: fixed;
-    bottom: 0; */
-   
     width: 100%;
     height: 100px;
     background-color: black;
@@ -24,3 +21,6 @@
 .footer .warn {
     color: yellow
 }
+
+
+
