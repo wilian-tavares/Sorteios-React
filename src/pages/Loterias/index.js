@@ -73,9 +73,12 @@ function Loterias(){
             }            
         }
         dezenas.sort(Order)
+        lotofacil.innerHTML = '';
 
         return(
-            lotofacil.innerHTML = dezenas
+            dezenas.map((dezena) => {
+                lotofacil.innerHTML += `${dezena} - `;
+                })
         )
     }
 

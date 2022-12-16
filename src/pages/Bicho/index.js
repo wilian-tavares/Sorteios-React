@@ -5,11 +5,119 @@ function Bicho(){
 
     function Grupo(){
         let grupo = document.querySelector('#grupo');
-        let dezena = Math.round(Math.random()*25 + 1)
+        let dezena = Math.round(Math.random()*25 + 1);
+        let bicho;
 
-        return (
-            grupo.innerHTML = dezena
-        )
+        switch (dezena) {
+            case 1:
+                bicho = 'AVESTRUZ'
+                break;
+                
+            case 2:
+                bicho = 'ÁGUIA'
+                break;
+
+            case 3:
+                bicho = 'BURRO'
+                break;
+
+            case 4:
+                bicho = 'BORBOLETA'
+                break;
+
+            case 5:
+                bicho = 'CACHORRO'
+                break;
+                
+            case 6:
+                bicho = 'CABRA'
+                break;
+
+            case 7:
+                bicho = 'CARNEIRO'
+                break;
+
+            case 8:
+                bicho = 'CAMELO'
+                break;
+
+            case 9:
+                bicho = 'COBRA'
+                break;
+
+            case 10:
+                bicho = 'COELHO'
+                break;
+
+            case 11:
+                bicho = 'CAVALO'
+                break;
+
+            case 12:
+                 bicho = 'ELEFANTE'
+                break;
+                
+            case 13:
+                bicho = 'GALO'
+                break;
+                
+            case 14:
+                bicho = 'GATO'
+                break;
+                
+            case 15:
+                bicho = 'JACARÉ'
+                break;
+                
+            case 16:
+                bicho = 'LEÃO'
+                break;
+                
+            case 17:
+                bicho = 'MACACO'
+                break;
+                
+            case 18:
+                bicho = 'PORCO'
+                break;
+                
+            case 19:
+                bicho = 'PAVÃO'
+                break;
+                
+            case 20:
+                bicho = 'PERU'
+                break;
+
+            case 21:
+                bicho = 'TOURO'
+                break;
+
+            case 22:
+               bicho = 'TIGRE'
+                break;
+
+            case 23:
+                bicho = 'URSO'
+                break;
+
+            case 24:
+                bicho = 'VEADO'
+                console.log(bicho)
+                break;
+
+            case 25:
+                bicho = 'VACA';
+                console.log(bicho)
+                break;
+            
+            default:
+                alert(`${dezena} não existe`)   
+            }
+            
+            return (
+            grupo.innerHTML = `GRUPO ${dezena} - ${bicho}`
+        )      
     }
 
     function Centena(){
@@ -77,10 +185,7 @@ function Bicho(){
             <Sorteio id='milhar' funcao={Milhar} placeholder='MILHAR'/>
             <Sorteio id='duque' funcao={Duque} placeholder='DUQUE-DEZENA'/>
             <Sorteio id='terno' funcao={Terno} placeholder='TERNO-DEZENA'/>
-            
-        </div>
-
-        
+        </div>       
     )
 }
 
