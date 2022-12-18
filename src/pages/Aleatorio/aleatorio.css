@@ -6,4 +6,7 @@
     align-items: center;
     flex-direction: column; 
   }
+.container-aleatorio h1 {
+  margin-bottom: 50px;
+}
 
