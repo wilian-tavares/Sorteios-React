@@ -3,6 +3,10 @@ import './bicho.css';
 
 function Bicho(){
 
+    function Order(a,b){
+        return a - b;
+    }
+
     function Grupo(){
         let grupo = document.querySelector('#grupo');
         let dezena = Math.round(Math.random()*25 + 1);
@@ -152,6 +156,8 @@ function Bicho(){
                 dezenas.push(dezena)
             }
         }
+
+        dezenas.sort(Order)
             return (
                 duque.innerHTML = dezenas
             )
@@ -171,8 +177,36 @@ function Bicho(){
                 dezenas.push(dezena)
             }
         }
+        
+        dezenas.sort(Order)
             return(
                 terno.innerHTML = dezenas
+            )
+    }
+
+    function DezenasBolao(){
+        let bolao = document.querySelector('#bolao');
+        let dezena;
+        let dezenas = [];
+
+        while(dezenas.length < 10){
+            dezena = Math.round(Math.random()*100)
+
+            if(dezenas.includes(dezena)){
+            }
+            else{
+                dezenas.push(dezena)
+            }
+        }
+
+        dezenas.sort(Order)
+        bolao.innerHTML = ''
+
+            return(
+                dezenas.map((dezena) => {
+                    bolao.innerHTML += `${dezena} - `
+                })
+               
             )
     }
         
@@ -185,6 +219,7 @@ function Bicho(){
             <Sorteio id='milhar' funcao={Milhar} placeholder='MILHAR'/>
             <Sorteio id='duque' funcao={Duque} placeholder='DUQUE-DEZENA'/>
             <Sorteio id='terno' funcao={Terno} placeholder='TERNO-DEZENA'/>
+            <Sorteio id='bolao' funcao={DezenasBolao} placeholder="BOLÃO" />
         </div>       
     )
 }
