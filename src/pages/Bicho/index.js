@@ -190,7 +190,7 @@ function Bicho(){
         let dezenas = [];
 
         while(dezenas.length < 10){
-            dezena = Math.round(Math.random()*100)
+            dezena = Math.round(Math.random()*99)
 
             if(dezenas.includes(dezena)){
             }

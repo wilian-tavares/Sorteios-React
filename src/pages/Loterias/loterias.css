@@ -22,3 +22,10 @@
     height: 220px;
   }
 }
+
+@media (max-width: 450px) {
+  #lotomania {
+    height: 300px;
+    width: 200px;
+  }
+}
