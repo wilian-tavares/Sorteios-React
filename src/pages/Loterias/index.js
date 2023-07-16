@@ -114,7 +114,7 @@ function Loterias(){
     return(
         <div className='container-loterias'>
             <div>
-                <h1>Bem Vindo ao Loterias</h1>
+                <h1>Página Loterias</h1>
             </div>
            
 

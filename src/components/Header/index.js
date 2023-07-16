@@ -5,7 +5,7 @@ function Header(){
     return(
         <div className='header'>
             <div className='logo'>
-                <h1>Site Loterias</h1>
+                <h1>Wil Sorteios</h1>
                 <span>Seu site de Sorteios</span>
             </div>  
 

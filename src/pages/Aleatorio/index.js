@@ -30,7 +30,7 @@ function Aleatorio(){
 
     return(
         <div className='container-aleatorio'>
-              <h1>Bem Vindo ao Aleatorio</h1>
+              <h1>Página Aleatorio</h1>
 
               <Sorteio id='unidade' funcao={Unidade} placeholder='0 - 9' />
               <Sorteio id='dezena' funcao={Dezena} placeholder='0 - 99' />

@@ -212,7 +212,7 @@ function Bicho(){
         
     return(
         <div className='container-bicho'>
-            <h1>Bem Vindo ao Bicho</h1>
+            <h1>Página Bicho</h1>
 
             <Sorteio id='grupo' funcao={Grupo} placeholder='GRUPO'/>
             <Sorteio id='centena' funcao={Centena} placeholder='CENTENA'/>
